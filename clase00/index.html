@@ -17,18 +17,30 @@
     .elemento {
       margin: 15px;
     }
-    /* Selector por elemento */
-    /*a:hover {
+    /* Selector por elemento - selecciona todos los <a> */
+    /*
+    a {
+      color: red;
+    }
+    /* Estado: hover (pasar el mouse por encima) */
+    /*
+    a:hover {
       color: black;
-    }*/
+    }
+    */
 
     /* Selectores complejos */
-    /*.links a {
+    /* Todos los <a> que desciendan de .links (hijos, nietos, etc)
+    /*
+    .links a {
       color: red;
     }
     .links a:hover {
       color: black;
-    }*/
+    }
+    */
+
+    /* Todos los <a> INMEDIATAMENTE descendientes de .links */
     .links > a {
       color: red;
     }
