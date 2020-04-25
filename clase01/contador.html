@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <!-- Comentario -->
+  <title>Contador</title>
+</head>
+<body>
+<button>Clickeame</button>
+  
+  <div>Clicks: </div>
+  <div id="numero">0</div>
+
+  <script>
+    var contador = 0
+    var boton = document.querySelector('button')
+    var numero = document.querySelector('#numero')
+
+    boton.addEventListener('click', function() {
+      contador++
+      numero.innerHTML = contador
+      console.log(contador)
+    })
+  </script>
+</body>
+
+</html>

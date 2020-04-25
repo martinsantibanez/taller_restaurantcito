@@ -1,0 +1,88 @@
+<html>
+
+<head>
+  <!-- Comentario -->
+  <title>Hola gente</title>
+  <style>
+    /* Selector por id */
+    #title {
+      font-size: 42px;
+      background-color: #467599;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* Selector por clase */
+    .elemento {
+      margin: 15px;
+    }
+    /* Selector por elemento */
+    /*a:hover {
+      color: black;
+    }*/
+
+    /* Selectores complejos */
+    /*.links a {
+      color: red;
+    }
+    .links a:hover {
+      color: black;
+    }*/
+    .links > a {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="title">
+    Restaurantcito
+  </div>
+  <div class="links">
+    <div>
+      <a>Dentro de un div</a>
+    </div>
+    <a href="https://google.com">Ir a google</a>
+    <a href="secreto.html">Ir al secreto</a>
+    <a href="contador.html">Ir al contador</a>
+    Cómo estás?
+  </div>
+  <div class="elemento">
+    Button
+    <button>Hola hola</button>
+  </div>
+  <div class="elemento">
+    Input type="text"
+    <input type="text" placeholder="Escribe algo..." value="Ya escribi" />
+  </div>
+  <div class="elemento">
+    Checkbox
+    <input type="checkbox" />
+    <input type="checkbox" />
+    <input type="checkbox" />
+  </div>
+  <div class="elemento">
+    Select
+    <select>
+      <option>Café</option>
+      <option>Té</option>
+    </select>
+  </div>
+  <div class="elemento">
+    radio
+    <input type="radio" name="gender" value="male">
+    <label>Male</label>
+    <input type="radio" name="gender" value="female">
+    <label>Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+    <a href="#">Volver arriba</a>
+  </div>
+
+  <script>
+    
+  </script>
+</body>
+
+</html>
