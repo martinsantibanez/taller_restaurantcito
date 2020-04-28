@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <!-- Comentario -->
+    <title>Hola gente</title>
+    <style>
+      /* Selector por id */
+      #title {
+        font-size: 42px;
+        background-color: #467599;
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="title">
+      Restaurantcito
+    </div>
+
+    <div class="precio">
+      Precio por unidad: 
+      <input type="number" value="1000" id="precioUnidad" />
+    </div>
+    <div class="produtos">
+      Número de productos
+      <input type="number" value="0" id="numProductos" />
+      <button id="calcular">Calcular</button>
+    </div>
+    <div>
+      Precio total:
+      <div id="total">0</div>
+    </div>
+
+    <script>
+      var inputProductos = document.querySelector("#numProductos")
+      var botonCalcular = document.querySelector("#calcular")
+      var inputUnidad = document.querySelector("#precioUnidad")
+      var divTotal = document.querySelector('#total')
+      
+      botonCalcular.addEventListener("click", function (event) {
+        var precioUnidad = inputUnidad.value
+        var numProductos = inputProductos.value
+        var precioTotal = precioUnidad * numProductos
+        divTotal.innerHTML = precioTotal
+      });
+    </script>
+  </body>
+</html>

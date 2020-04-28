@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script>
+      /* Ciclo for */
+      console.log("CON FOR:")
+      for (var i = 0; i < 10; i++) {
+        console.log(i)
+      }
+
+      /* Ciclo while */
+      console.log("CON WHILE:")
+      var i = 0;
+      while (i < 10) {
+        console.log(i)
+        i++
+      }
+
+      /* Array       0  1  2  */
+      var arreglo = [9, 8, 7] // 3 elementos
+      arreglo.push(10) // ahora son 4
+      for (var i = 0; i < arreglo.length; i++) {
+        arreglo[i] = arreglo[i] * 2
+      }
+
+      for (var i = 0; i < arreglo.length; i++) {
+        console.log(arreglo[i])
+      }
+
+      /* Objetos */
+      var platos = []
+      var ceviche = {
+        nombre: "Ceviche",
+        precio: 6000,
+      }
+      var tiramisu = {
+        nombre: "Tiramisu",
+        precio: 2000,
+      }
+      platos.push(ceviche)
+      platos.push(tiramisu)
+      console.log(platos)
+    </script>
+  </body>
+</html>
