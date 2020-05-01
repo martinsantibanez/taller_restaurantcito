@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Hola gente</title>
+    <style>
+      /* Selector por id */
+      #title {
+        font-size: 42px;
+        background-color: #467599;
+        color: white;
+        text-align: center;
+        padding: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="title">
+      <h1>Restaurantcito</h1>
+    </div>
+
+    <div class="precio">
+      <h2>Precio por unidad:</h2>
+      <input type="number" value="1000" id="precioUnidad" />
+    </div>
+    <div class="numero-produtos">
+      <h2>Número de productos</h2>
+      <input type="number" max="10" min="0" value="0" id="numProductos" />
+    </div>
+    <div>
+      <h2>Precio total:</h3>
+      <div id="total">0</div>
+    </div>
+    
+    
+    <h2>Lista Productos</h2>
+    <ul id="lista-productos">
+
+    </ul>
+
+    <script>
+      var inputProductos = document.querySelector("#numProductos")
+      var botonCalcular = document.querySelector("#calcular")
+      var inputPrecio = document.querySelector("#precioUnidad")
+      var divTotal = document.querySelector('#total')
+      var listaProductos = document.getElementById('lista-productos') // equivale a querySelector('#lista-productos')
+      
+      function actualizarTotal(event) {
+        console.log(event)
+        var precioUnidad = inputPrecio.value
+        var numProductos = inputProductos.value
+        var precioTotal = precioUnidad * numProductos
+        console.log('precioUnidad: ' + precioUnidad + ' numProductos:' + numProductos + ' = ' + precioTotal)
+        divTotal.innerHTML = precioTotal
+      }
+
+      inputProductos.addEventListener("keydown", actualizarTotal)
+      inputProductos.addEventListener("change", actualizarTotal)
+      inputPrecio.addEventListener("keydown", actualizarTotal)
+
+      // LISTA DE PLATOS DINÁMICA
+      var platos = []
+      
+      function reqListener () {
+        platos = JSON.parse(this.responseText)
+        console.log(platos)
+
+        for(var platoActual of platos) {
+          var elementoPlato = document.createElement('li')
+          var etiqueta = document.createTextNode(platoActual.nombre)
+          elementoPlato.appendChild(etiqueta)
+          listaProductos.appendChild(elementoPlato)
+        }
+      }
+
+      // Obtener datos del archivo
+      var oReq = new XMLHttpRequest();
+      oReq.addEventListener("load", reqListener);
+      oReq.open("GET", "http://localhost/restaurantcito/data.json");
+      oReq.send();
+      
+      
+      
+      // equivalente a for .. of ..
+      /*for(var i = 0; i < platos.length; i++){ 
+        platoActual = platos[i]
+
+      }*/
+
+
+    </script>
+  </body>
+</html>

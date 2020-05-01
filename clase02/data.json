@@ -1,0 +1,30 @@
+[
+  {
+    "nombre": "Ceviche",
+    "precio": 6000
+  },
+  {
+    "nombre": "Tiramisu",
+    "precio": 2000
+  },
+  {
+    "nombre": "Fruna cola",
+    "precio": 1000
+  },
+  {
+    "nombre": "Coca cola",
+    "precio": 1500
+  },
+  {
+    "nombre": "Tocomple",
+    "precio": 1000
+  },
+  {
+    "nombre": "Baltiloka",
+    "precio": 500
+  },
+  {
+    "nombre": "Tocomple + Baltiloka",
+    "precio": 1200
+  }
+]
