@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Ceviche",
+    "price": 6000
+  },
+  {
+    "id": 2,
+    "name": "Tiramisu",
+    "price": 2000
+  },
+  {
+    "id": 3,
+    "name": "Fruna cola",
+    "price": 1000
+  },
+  {
+    "id": 4,
+    "name": "Coca cola",
+    "price": 1500
+  },
+  {
+    "id": 5,
+    "name": "Tocomple",
+    "price": 1000
+  },
+  {
+    "id": 6,
+    "name": "Baltiloka",
+    "price": 500
+  },
+  {
+    "id": 7,
+    "name": "Tocomple + Baltiloka",
+    "price": 1200
+  }
+]

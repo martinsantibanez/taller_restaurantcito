@@ -40,5 +40,14 @@ const esBarato = (plato) => {
 const nombres = platos.map(getNombre)
 const platosBaratos = platos.filter(esBarato)
 
+// Cuando la función no tiene cuerpo, la instrucción única es el "return"
+const ceviche = platos.find(plato => plato.nombre == 'Ceviche') 
+// Es decir, esto equivale a:
+/*
+const ceviche = platos.find(plato => {
+  return plato.nombre == 'Ceviche'
+})
+*/
+
 console.log(nombres)
 console.log(platosBaratos)
